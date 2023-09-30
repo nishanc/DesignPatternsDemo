@@ -1,6 +1,9 @@
 # Design Patterns Demo
 
-This repository contains a .NET Console Application written in C#. Follow the steps below to set up your development environment and run the application.
+This repository is a collection of sample code implementations for various design patterns in C#. Design patterns are proven solutions to common problems encountered in software design and development. This repository serves as a valuable resource for developers looking to understand and apply design patterns in their C# projects.
+
+- Related slides: https://speakerdeck.com/nishanc/design-patterns-for-developers
+- Related quiz: https://forms.gle/26wb53KLZsg1Dx1s7
 
 ## Prerequisites
 
