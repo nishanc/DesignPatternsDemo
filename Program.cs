@@ -48,11 +48,20 @@
 
 #region Decorator
 
-Coffee espresso = new Espresso();
-Coffee caramelCoffee = new CaramelDecorator(espresso);
-Coffee finalCoffee = new WhippedCreamDecorator(caramelCoffee);
+// Coffee espresso = new Espresso();
+// Coffee caramelCoffee = new CaramelDecorator(espresso);
+// Coffee finalCoffee = new WhippedCreamDecorator(caramelCoffee);
 
-Console.WriteLine($"Description: {finalCoffee.GetDescription()}");
-Console.WriteLine($"Cost: ${finalCoffee.GetCost()}");
+// Console.WriteLine($"Description: {finalCoffee.GetDescription()}");
+// Console.WriteLine($"Cost: ${finalCoffee.GetCost()}");
+
+#endregion
+
+#region Adapter
+
+EuropeanLaptop europeanLaptop = new EuropeanLaptop();
+IAmericanLaptop americanLaptop = new LaptopAdapter(europeanLaptop);
+
+americanLaptop.ChargeWithAmericanPlug();
 
 #endregion
