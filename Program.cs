@@ -91,8 +91,18 @@
 
 #region Proxy
 
-IInternet internet = new InternetProxy();
-internet.ConnectTo("google.com");
-internet.ConnectTo("blocked.com");
+// IInternet internet = new InternetProxy();
+// internet.ConnectTo("google.com");
+// internet.ConnectTo("blocked.com");
+
+#endregion
+
+#region DependencyInjection
+
+// Dependency Injection Container (e.g., Dependency Injection Framework)
+IMessageService emailService = new EmailService();
+MessageClient client = new MessageClient(emailService);
+
+client.SendNotification("Hello, World!");
 
 #endregion
