@@ -28,10 +28,20 @@
 
 #region Builder
 
-IBurgerBuilder builder = new DeluxeBurgerBuilder();
-Waiter waiter = new Waiter(builder);
-Burger burger = waiter.Construct();
+// IBurgerBuilder builder = new DeluxeBurgerBuilder();
+// Waiter waiter = new Waiter(builder);
+// Burger burger = waiter.Construct();
 
-burger.Display();
+// burger.Display();
+
+#endregion
+
+#region AbstractBuilder
+
+ComputerBuilder absBuilder = new GamingComputerBuilder();
+ComputerAssembler assembler = new ComputerAssembler();
+Computer computer = assembler.Assemble(absBuilder);
+
+computer.Display();
 
 #endregion
