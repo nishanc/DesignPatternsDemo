@@ -59,9 +59,22 @@
 
 #region Adapter
 
-EuropeanLaptop europeanLaptop = new EuropeanLaptop();
-IAmericanLaptop americanLaptop = new LaptopAdapter(europeanLaptop);
+// EuropeanLaptop europeanLaptop = new EuropeanLaptop();
+// IAmericanLaptop americanLaptop = new LaptopAdapter(europeanLaptop);
 
-americanLaptop.ChargeWithAmericanPlug();
+// americanLaptop.ChargeWithAmericanPlug();
+
+#endregion
+
+#region Observer
+
+INewsPublisher newsAgency = new NewsAgency();
+INewsSubscriber subscriber1 = new NewsSubscriber("Subscriber 1");
+INewsSubscriber subscriber2 = new NewsSubscriber("Subscriber 2");
+
+newsAgency.AddSubscriber(subscriber1);
+newsAgency.AddSubscriber(subscriber2);
+
+newsAgency.NotifySubscribers("Breaking News: COVID-19 Update");
 
 #endregion
