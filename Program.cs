@@ -20,8 +20,18 @@
 
 #region AbstractFactory
 
-FurnitureFactory absFactory = new ModernFurnitureFactory();
-Chair chair = absFactory.CreateChair();
-chair.SitOn();
+// FurnitureFactory absFactory = new ModernFurnitureFactory();
+// Chair chair = absFactory.CreateChair();
+// chair.SitOn();
+
+#endregion
+
+#region Builder
+
+IBurgerBuilder builder = new DeluxeBurgerBuilder();
+Waiter waiter = new Waiter(builder);
+Burger burger = waiter.Construct();
+
+burger.Display();
 
 #endregion
