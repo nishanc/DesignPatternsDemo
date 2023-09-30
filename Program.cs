@@ -38,10 +38,21 @@
 
 #region AbstractBuilder
 
-ComputerBuilder absBuilder = new GamingComputerBuilder();
-ComputerAssembler assembler = new ComputerAssembler();
-Computer computer = assembler.Assemble(absBuilder);
+// ComputerBuilder absBuilder = new GamingComputerBuilder();
+// ComputerAssembler assembler = new ComputerAssembler();
+// Computer computer = assembler.Assemble(absBuilder);
 
-computer.Display();
+// computer.Display();
+
+#endregion
+
+#region Decorator
+
+Coffee espresso = new Espresso();
+Coffee caramelCoffee = new CaramelDecorator(espresso);
+Coffee finalCoffee = new WhippedCreamDecorator(caramelCoffee);
+
+Console.WriteLine($"Description: {finalCoffee.GetDescription()}");
+Console.WriteLine($"Cost: ${finalCoffee.GetCost()}");
 
 #endregion
