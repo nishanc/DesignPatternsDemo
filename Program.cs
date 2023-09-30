@@ -81,10 +81,18 @@
 
 #region MVC
 
-Restaurant restaurant = new Restaurant();
-CustomerView customerView = new CustomerView();
-WaitstaffController waitstaff = new WaitstaffController(restaurant, customerView);
+// Restaurant restaurant = new Restaurant();
+// CustomerView customerView = new CustomerView();
+// WaitstaffController waitstaff = new WaitstaffController(restaurant, customerView);
 
-waitstaff.TakeOrder("Burger");
+// waitstaff.TakeOrder("Burger");
+
+#endregion
+
+#region Proxy
+
+IInternet internet = new InternetProxy();
+internet.ConnectTo("google.com");
+internet.ConnectTo("blocked.com");
 
 #endregion
