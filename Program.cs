@@ -68,13 +68,23 @@
 
 #region Observer
 
-INewsPublisher newsAgency = new NewsAgency();
-INewsSubscriber subscriber1 = new NewsSubscriber("Subscriber 1");
-INewsSubscriber subscriber2 = new NewsSubscriber("Subscriber 2");
+// INewsPublisher newsAgency = new NewsAgency();
+// INewsSubscriber subscriber1 = new NewsSubscriber("Subscriber 1");
+// INewsSubscriber subscriber2 = new NewsSubscriber("Subscriber 2");
 
-newsAgency.AddSubscriber(subscriber1);
-newsAgency.AddSubscriber(subscriber2);
+// newsAgency.AddSubscriber(subscriber1);
+// newsAgency.AddSubscriber(subscriber2);
 
-newsAgency.NotifySubscribers("Breaking News: COVID-19 Update");
+// newsAgency.NotifySubscribers("Breaking News: COVID-19 Update");
+
+#endregion
+
+#region MVC
+
+Restaurant restaurant = new Restaurant();
+CustomerView customerView = new CustomerView();
+WaitstaffController waitstaff = new WaitstaffController(restaurant, customerView);
+
+waitstaff.TakeOrder("Burger");
 
 #endregion
