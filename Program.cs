@@ -49,9 +49,14 @@
 #region Decorator
 
 // Coffee espresso = new Espresso();
-// Coffee caramelCoffee = new CaramelDecorator(espresso);
-// Coffee finalCoffee = new WhippedCreamDecorator(caramelCoffee);
+// Console.WriteLine($"Description: {espresso.GetDescription()}");
+// Console.WriteLine($"Cost: ${espresso.GetCost()}");
 
+// Coffee caramelCoffee = new CaramelDecorator(espresso);
+// Console.WriteLine($"Description: {caramelCoffee.GetDescription()}");
+// Console.WriteLine($"Cost: ${caramelCoffee.GetCost()}");
+
+// Coffee finalCoffee = new WhippedCreamDecorator(caramelCoffee);
 // Console.WriteLine($"Description: {finalCoffee.GetDescription()}");
 // Console.WriteLine($"Cost: ${finalCoffee.GetCost()}");
 
