@@ -74,23 +74,23 @@ public class PaymentProcessor
     }
 }
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Create payment processors with the desired factory
-        IPaymentMethodFactory creditCardFactory = new CreditCardPaymentFactory();
-        PaymentProcessor creditCardProcessor = new PaymentProcessor(creditCardFactory);
-
-        IPaymentMethodFactory payPalFactory = new PayPalPaymentFactory();
-        PaymentProcessor payPalProcessor = new PaymentProcessor(payPalFactory);
-
-        IPaymentMethodFactory bitcoinFactory = new BitcoinPaymentFactory();
-        PaymentProcessor bitcoinProcessor = new PaymentProcessor(bitcoinFactory);
-
-        // Process payments
-        creditCardProcessor.ProcessPayment();
-        payPalProcessor.ProcessPayment();
-        bitcoinProcessor.ProcessPayment();
-    }
-}
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         // Create payment processors with the desired factory
+//         IPaymentMethodFactory creditCardFactory = new CreditCardPaymentFactory();
+//         PaymentProcessor creditCardProcessor = new PaymentProcessor(creditCardFactory);
+//
+//         IPaymentMethodFactory payPalFactory = new PayPalPaymentFactory();
+//         PaymentProcessor payPalProcessor = new PaymentProcessor(payPalFactory);
+//
+//         IPaymentMethodFactory bitcoinFactory = new BitcoinPaymentFactory();
+//         PaymentProcessor bitcoinProcessor = new PaymentProcessor(bitcoinFactory);
+//
+//         // Process payments
+//         creditCardProcessor.ProcessPayment();
+//         payPalProcessor.ProcessPayment();
+//         bitcoinProcessor.ProcessPayment();
+//     }
+// }

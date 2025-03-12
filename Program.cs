@@ -71,6 +71,27 @@
 
 #endregion
 
+#region Strategy
+
+using DesignPatternsDemo.Strategy;
+
+List<int> numbers = [64, 25, 12, 22, 11];
+
+// Use Bubble Sort strategy
+Sorter sorter = new Sorter(new BubbleSort());
+sorter.SortNumbers(numbers);
+Console.WriteLine(string.Join(", ", numbers));
+
+// Change to Quick Sort strategy
+numbers = [64, 25, 12, 22, 11]; // Reset list
+
+sorter.SetStrategy(new QuickSort());
+
+sorter.SortNumbers(numbers);
+Console.WriteLine(string.Join(", ", numbers));
+
+#endregion
+
 #region Observer
 
 // INewsPublisher newsAgency = new NewsAgency();
@@ -105,9 +126,9 @@
 #region DependencyInjection
 
 // Dependency Injection Container (e.g., Dependency Injection Framework)
-IMessageService emailService = new EmailService();
-MessageClient client = new MessageClient(emailService);
-
-client.SendNotification("Hello, World!");
+// IMessageService emailService = new EmailService();
+// MessageClient client = new MessageClient(emailService);
+//
+// client.SendNotification("Hello, World!");
 
 #endregion
