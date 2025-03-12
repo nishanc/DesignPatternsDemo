@@ -9,7 +9,7 @@ This repository is a collection of sample code implementations for various desig
 
 Before you can run this application, make sure you have the following software installed on your computer:
 
-1. [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0): You'll need the .NET SDK to build and run .NET applications. Download and install the appropriate version for your operating system from the official website. (Usually it's [Windows x64](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.401-windows-x64-installer))
+1. [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0): You'll need the .NET SDK to build and run .NET applications. Download and install the appropriate version for your operating system from the official website. (Usually it's [Windows x64](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-7.0.401-windows-x64-installer))
 
 
 2. [Visual Studio Code (VSCode)](https://code.visualstudio.com/): VSCode is a lightweight, open-source code editor that works well with .NET development. You can download it for free from the official website.
@@ -20,7 +20,7 @@ After installing, execute following command on a terminal to see if .NET was ins
 dotnet --list-sdks
 ```
 
-This should provide an output like: `7.0.401 [C:\Program Files\dotnet\sdk]`
+This should provide an output like: `9.0.201 [C:\Program Files\dotnet\sdk]`
 ## Clone the Repository
 
 To get started, you'll need to clone this repository to your local machine. Open a terminal and use the following command:
