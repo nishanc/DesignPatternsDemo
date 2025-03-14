@@ -73,22 +73,22 @@
 
 #region Strategy
 
-using DesignPatternsDemo.Strategy;
+// using DesignPatternsDemo.Strategy;
 
-List<int> numbers = [64, 25, 12, 22, 11];
+// List<int> numbers = [64, 25, 12, 22, 11];
 
-// Use Bubble Sort strategy
-Sorter sorter = new Sorter(new BubbleSort());
-sorter.SortNumbers(numbers);
-Console.WriteLine(string.Join(", ", numbers));
+// // Use Bubble Sort strategy
+// Sorter sorter = new Sorter(new BubbleSort());
+// sorter.SortNumbers(numbers);
+// Console.WriteLine(string.Join(", ", numbers));
 
-// Change to Quick Sort strategy
-numbers = [64, 25, 12, 22, 11]; // Reset list
+// // Change to Quick Sort strategy
+// numbers = [64, 25, 12, 22, 11]; // Reset list
 
-sorter.SetStrategy(new QuickSort());
+// sorter.SetStrategy(new QuickSort());
 
-sorter.SortNumbers(numbers);
-Console.WriteLine(string.Join(", ", numbers));
+// sorter.SortNumbers(numbers);
+// Console.WriteLine(string.Join(", ", numbers));
 
 #endregion
 
@@ -128,7 +128,18 @@ Console.WriteLine(string.Join(", ", numbers));
 // Dependency Injection Container (e.g., Dependency Injection Framework)
 // IMessageService emailService = new EmailService();
 // MessageClient client = new MessageClient(emailService);
-//
+
 // client.SendNotification("Hello, World!");
 
+#endregion
+
+#region Demo
+
+// using DesignPatternsDemo.Examples;
+//
+// Sorter sorter = new Sorter();
+// List<int> numbers = new List<int> { 5, 3, 8, 1 };
+//
+// sorter.Sort(numbers, "BubbleSort");  // Outputs: Sorting using Quick Sort...
+// Console.WriteLine(string.Join(", ", numbers));  // Outputs: 1, 3, 5, 8
 #endregion
